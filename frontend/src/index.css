@@ -231,3 +231,21 @@ a > .rating > span:last-child {
 .text-center {
   text-align: center;
 }
+
+/* Cart*/
+.cart {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+}
+.cart-list {
+  flex: 3 1 60rem;
+}
+.cart-action {
+  flex: 1 1 20rem;
+  background-color: #f8f8f8;
+  border: .1rem #808080 solid;
+  border-radius: .5rem;
+  padding: 1rem;
+
+}
