@@ -23,6 +23,10 @@ function CartScreen (props){
         }
       }, [dispatch,productId,qty]);
 
+      const checkoutHandler = () => {
+          props.history.push('/signin? redirect = shipping');
+      }
+
     return <div className = 'cart'>
         <div className = 'cart-list'>
             <ul className = 'cart-list-container'>
@@ -85,7 +89,7 @@ function CartScreen (props){
                 :
                    Kshs {cartItems.reduce((a,c) => a + c.price * c.qty, 0)}
             </h3>
-            <button className = 'button primary' disabled = {cartItems.length === 0}>
+            <button  onClick = {checkoutHandler} className = 'button primary' disabled = {cartItems.length === 0}>
                 Proceed To Checkout
 
             </button>
