@@ -1,4 +1,4 @@
-import { CART_ADD_ITEM } from '../constants/cartConstants';
+import { CART_ADD_ITEM , CART_REMOVE_ITEM} from '../constants/cartConstants';
 
 const { default: Axios } = require("axios")
 
@@ -16,9 +16,13 @@ const addToCart = (productId,qty) => async(dispatch) => {
             qty
         }})
         
+        
     } catch (error) {
         
     }
 
 }
-export { addToCart }
+const removeFromCart = (productId) => (dispatch) => {
+    dispatch({type:CART_REMOVE_ITEM, payload:productId});
+}
+export { addToCart,removeFromCart }

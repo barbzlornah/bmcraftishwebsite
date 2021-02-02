@@ -1,4 +1,4 @@
-import React,{ useState,useEffect } from 'react';
+import React,{useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import{listProducts} from '../actions/productsActions';
@@ -13,7 +13,7 @@ function HomeScreen(props) {
     return () =>{
 
     };
-  }, [])
+  }, [dispatch]);
 
   return loading? <div>Loading...</div> :
   error? <div>{error}</div> :
