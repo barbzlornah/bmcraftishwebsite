@@ -14,7 +14,8 @@ const addToCart = (productId,qty) => async(dispatch) => {
             price:data.price,
             countInStock:data.countInStock,
             qty
-        }})
+        }
+    });
         
         
     } catch (error) {
